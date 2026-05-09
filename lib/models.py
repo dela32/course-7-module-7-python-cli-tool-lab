@@ -5,12 +5,16 @@
 class Task:
     def __init__(self, title):
         # TODO: Assign the title
+        self.title = title
         # TODO: Set completed to False
+        self.completed = False
         pass
 
     def complete(self):
         # TODO: Mark the task as complete
+        self.completed = True
         # TODO: Print a confirmation message
+        print(f"✅ Task '{self.title}' completed.")
         pass
 
 # TODO: Define the User class
@@ -20,12 +24,16 @@ class Task:
 class User:
     def __init__(self, name):
         # TODO: Store the user's name
+        self.name = name
         # TODO: Initialize an empty list of tasks
+        self.tasks = []
         pass
 
     def add_task(self, task):
         # TODO: Add the task to the user's task list
+        self.tasks.append(task)
         # TODO: Print a message confirming the task was added
+        print(f"📌 Task '{task.title}' added to {self.name}.")
         pass
 
     def get_task_by_title(self, title):
